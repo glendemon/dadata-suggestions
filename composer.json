@@ -1,0 +1,26 @@
+{
+  "name": "glendemon/DadataSuggestions",
+  "description": "Integration with Dadata suggestions API.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Victor Demin",
+      "email": "mail@vdemin.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "glendemon\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.6.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+    "ext-curl": "*",
+    "phpunit/phpunit": "~4.0",
+    "psr/log": "~1.0"
+  }
+}
