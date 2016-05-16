@@ -21,7 +21,7 @@
   },
   "require-dev": {
     "ext-curl": "*",
-    "phpunit/phpunit": "~4.0",
+    "phpunit/phpunit": "*",
     "psr/log": "~1.0"
   }
 }
