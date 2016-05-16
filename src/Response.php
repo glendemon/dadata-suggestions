@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Victor
- * Date: 11.05.2016
- * Time: 16:45
- */
 
 namespace DadataSuggestions;
 
