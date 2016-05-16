@@ -6,7 +6,7 @@
  * Time: 16:45
  */
 
-namespace glendemon\DadataSuggestions;
+namespace DadataSuggestions;
 
 use Psr\Http\Message\ResponseInterface;
 

@@ -6,13 +6,13 @@
  * Time: 17:18
  */
 
-namespace glendemon\DadataSuggestions\Data;
+namespace DadataSuggestions\Data;
 
-use glendemon\DadataSuggestions\ResponseData;
+use DadataSuggestions\ResponseData;
 
 /**
  * Class Party
- * @package glendemon\DadataSuggestions\Data
+ * @package DadataSuggestions\Data
  * @property $address_value Адрес организации одной строкой
  * @property $address_unrestricted_value = data.address.value
  * @property $address_data Объект адреса (Гранулярный адрес)

@@ -6,13 +6,13 @@
  * Time: 17:17
  */
 
-namespace glendemon\DadataSuggestions\Data;
+namespace DadataSuggestions\Data;
 
-use glendemon\DadataSuggestions\ResponseData;
+use DadataSuggestions\ResponseData;
 
 /**
  * Class Fio
- * @package glendemon\DadataSuggestions\Data
+ * @package DadataSuggestions\Data
  * @property $surname Фамилия
  * @property $name Имя
  * @property $patronymic Отчество

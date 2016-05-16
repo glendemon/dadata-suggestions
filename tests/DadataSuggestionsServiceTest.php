@@ -10,7 +10,7 @@ class DadataSuggestionsServiceTest extends PHPUnit_Framework_TestCase
 {
     public function testSome()
     {
-        $service = new \glendemon\DadataSuggestions\DadataSuggestionsService();
+        $service = new \DadataSuggestions\DadataSuggestionsService();
     }
 
 }

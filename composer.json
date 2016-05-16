@@ -1,5 +1,5 @@
 {
-  "name": "glendemon/DadataSuggestions",
+  "name": "glendemon/dadata_suggestions",
   "description": "Integration with Dadata suggestions API.",
   "keywords": ["dadata", "suggestions", "api"],
   "minimum-stability": "stable",

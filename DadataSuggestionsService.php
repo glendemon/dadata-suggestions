@@ -1,6 +1,6 @@
 <?php
 
-namespace glendemon\DadataSuggestions;
+namespace DadataSuggestions;
 
 use GuzzleHttp\Client;
 

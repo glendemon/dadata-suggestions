@@ -6,7 +6,7 @@
  * Time: 17:14
  */
 
-namespace glendemon\DadataSuggestions;
+namespace DadataSuggestions;
 
 abstract class ResponseData
 {

@@ -6,13 +6,13 @@
  * Time: 17:19
  */
 
-namespace glendemon\DadataSuggestions\Data;
+namespace DadataSuggestions\Data;
 
-use glendemon\DadataSuggestions\ResponseData;
+use DadataSuggestions\ResponseData;
 
 /**
  * Class Email
- * @package glendemon\DadataSuggestions\Data
+ * @package DadataSuggestions\Data
  * @property $local Именная часть
  * @property $domain Доменная часть
  * @property $qc Код качества (не заполняется)

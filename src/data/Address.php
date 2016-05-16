@@ -6,13 +6,13 @@
  * Time: 17:18
  */
 
-namespace glendemon\DadataSuggestions\Data;
+namespace DadataSuggestions\Data;
 
-use glendemon\DadataSuggestions\ResponseData;
+use DadataSuggestions\ResponseData;
 
 /**
  * Class Address
- * @package glendemon\DadataSuggestions\Data
+ * @package DadataSuggestions\Data
  * @property $postal_code Индекс
  * @property $country Страна
  * @property $region_with_type Регион с типом

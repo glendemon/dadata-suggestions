@@ -6,13 +6,13 @@
  * Time: 17:19
  */
 
-namespace glendemon\DadataSuggestions\Data;
+namespace DadataSuggestions\Data;
 
-use glendemon\DadataSuggestions\ResponseData;
+use DadataSuggestions\ResponseData;
 
 /**
  * Class Bank
- * @package glendemon\DadataSuggestions\Data
+ * @package DadataSuggestions\Data
  * @property $opf_type Тип (латинское сокращение)
  * @property $opf_full Полное наименование типа банковской организации
  * @property $opf_short Сокращенное наименование типа банковской организации
