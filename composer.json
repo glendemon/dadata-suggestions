@@ -1,6 +1,7 @@
 {
   "name": "glendemon/DadataSuggestions",
   "description": "Integration with Dadata suggestions API.",
+  "keywords": ["dadata", "suggestions", "api"],
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
