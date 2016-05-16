@@ -185,9 +185,8 @@ class DadataSuggestionsService
         $options = [
             'json' => $params
         ];
-        $result = new Response();
         $response = $this->getClient()->post($type, $options);
-        $result->setStatus($response->getStatusCode());
+        $result = new Response($response);
         return $result;
     }
 
