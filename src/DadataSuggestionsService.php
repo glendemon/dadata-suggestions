@@ -3,6 +3,7 @@
 namespace DadataSuggestions;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request;
 
 /**
  * Integration with Dadata suggestions API.
@@ -183,8 +184,13 @@ class DadataSuggestionsService
         $params['query'] = $query;
         $params['count'] = $count;
         $options = [
-            'json' => $params
+            'json' => $params,
+            'headers' => [
+                'Content-Type'  => 'application/json',
+                'Authorization' => 'Token ' . $this->getToken(),
+            ],
         ];
+
         $response = $this->getClient()->post($type, $options);
         $result = new Response($response);
         return $result;
