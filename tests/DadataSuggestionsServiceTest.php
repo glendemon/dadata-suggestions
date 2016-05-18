@@ -13,6 +13,11 @@ class DadataSuggestionsServiceTest extends PHPUnit_Framework_TestCase
         foreach ($response->getSuggestions() as $suggestion) {
             $this->assertEquals('г Москва', $suggestion->getValue());
             $this->assertEquals('г Москва', $suggestion->getUnrestrictedValue());
+            /** @var \DadataSuggestions\Data\Address $data */
+            $data = $suggestion->getData();
+            $this->assertInstanceOf(\DadataSuggestions\Data\Address::class, $data);
+            $this->assertEquals('Россия', $data->country);
+            $this->assertEquals('Москва', $data->city);
         }
     }
 
