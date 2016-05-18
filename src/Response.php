@@ -32,8 +32,9 @@ class Response
     /**
      * Response constructor.
      * @param ResponseInterface $responseInterface
+     * @param string $type
      */
-    public function __construct(ResponseInterface $responseInterface)
+    public function __construct(ResponseInterface $responseInterface, $type)
     {
         $this->setRaw($responseInterface);
         $this->setStatus($this->getRaw()->getStatusCode());
@@ -41,7 +42,7 @@ class Response
         $contents = \GuzzleHttp\json_decode($contents, true);
         if  (array_key_exists('suggestions', $contents) && is_array($contents['suggestions'])) {
             foreach ($contents['suggestions'] as $suggestion) {
-                $suggestion = new Suggestion($suggestion);
+                $suggestion = new Suggestion($type, $suggestion);
                 $this->suggestions[] = $suggestion;
             }
         }

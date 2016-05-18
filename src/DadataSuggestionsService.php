@@ -192,7 +192,7 @@ class DadataSuggestionsService
         ];
 
         $response = $this->getClient()->post($type, $options);
-        $result = new Response($response);
+        $result = new Response($response, $type);
         return $result;
     }
 

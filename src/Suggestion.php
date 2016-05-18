@@ -22,9 +22,10 @@ class Suggestion
 
     /**
      * Suggestion constructor.
-     * @param array|null $params
+     * @param string $type
+     * @param array $params
      */
-    public function __construct(array $params = null)
+    public function __construct($type, array $params = null)
     {
         if ($params) {
             if (array_key_exists('value', $params)) {
@@ -34,7 +35,8 @@ class Suggestion
                 $this->setUnrestrictedValue($params['unrestricted_value']);
             }
             if (array_key_exists('data', $params)) {
-//                $this->setData($params['data']);
+                $data = ResponseData::getInstance($type, $params['data']);
+                $this->setData($data);
             }
         }
     }
