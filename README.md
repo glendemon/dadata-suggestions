@@ -3,8 +3,10 @@ DadataSuggestions
 
 Integration with Dadata suggestions API.
 
-[![Latest Stable Version](https://poser.pugx.org/zhuravljov/yii2-debug/version.svg)](https://packagist.org/packages/zhuravljov/yii2-debug)
-[![Total Downloads](https://poser.pugx.org/zhuravljov/yii2-debug/downloads.png)](https://packagist.org/packages/zhuravljov/yii2-debug)
+[![Latest Stable Version](https://poser.pugx.org/glendemon/dadata-suggestions/v/stable)](https://packagist.org/packages/glendemon/dadata-suggestions)
+[![Total Downloads](https://poser.pugx.org/glendemon/dadata-suggestions/downloads)](https://packagist.org/packages/glendemon/dadata-suggestions)
+[![Latest Unstable Version](https://poser.pugx.org/glendemon/dadata-suggestions/v/unstable)](https://packagist.org/packages/glendemon/dadata-suggestions)
+[![License](https://poser.pugx.org/glendemon/dadata-suggestions/license)](https://packagist.org/packages/glendemon/dadata-suggestions)
 
 Installation
 -------------
