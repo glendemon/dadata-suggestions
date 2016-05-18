@@ -11,29 +11,21 @@ Installation
 
 This extension is available at packagist.org and can be installed via composer by following command:
 
-`composer require --dev zhuravljov/yii2-debug`.
-
-If you want to install this extension manually just copy sources to `/protected/extensions` directory.
-
-To enable toolbar in your application add following lines to config:
-
-```php
-return array(
-    'preload' => array(
-        'debug',
-    ),
-    'components' => array(
-        'debug' => array(
-            'class' => 'vendor.zhuravljov.yii2-debug.Yii2Debug', // composer installation
-            //'class' => 'ext.yii2-debug.Yii2Debug', // manual installation
-        ),
-        'db' => array(
-            'enableProfiling' => true,
-            'enableParamLogging' => true,
-        ),
-    ),
-);
+```json
+{
+  "repositories": [
+    {
+      "url": "https://github.com/glendemon/dadata-suggestions.git",
+      "type": "git"
+    }
+  ],
+  "require": {
+    "glendemon/dadata-suggestions": "@dev"
+  }
+}
 ```
+
+`composer require --dev glendemon/dadata-suggestions`.
 
 Configuration
 ---------
