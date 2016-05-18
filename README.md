@@ -13,7 +13,7 @@ Installation
 
 This extension is available at packagist.org and can be installed via composer by following command:
 
-`composer require --dev glendemon/dadata-suggestions`.
+`composer require --dev glendemon/dadata-suggestions`
 
 Configuration
 ---------
