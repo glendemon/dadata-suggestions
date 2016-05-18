@@ -25,19 +25,9 @@ class Response
     protected $status;
 
     /**
-     * @var string A single line (as shown in the list of suggestions)
+     * @var Suggestion[]
      */
-    protected $value;
-
-    /**
-     * @var string A single line (full)
-     */
-    protected $unrestricted_value;
-
-    /**
-     * @var ResponseData
-     */
-    protected $data;
+    protected $suggestions = [];
 
     /**
      * Response constructor.
@@ -47,8 +37,14 @@ class Response
     {
         $this->setRaw($responseInterface);
         $this->setStatus($this->getRaw()->getStatusCode());
-        $body = $this->getRaw()->getBody();
-        $body->getContents();
+        $contents = $this->getRaw()->getBody()->getContents();
+        $contents = \GuzzleHttp\json_decode($contents, true);
+        if  (array_key_exists('suggestions', $contents) && is_array($contents['suggestions'])) {
+            foreach ($contents['suggestions'] as $suggestion) {
+                $suggestion = new Suggestion($suggestion);
+                $this->suggestions[] = $suggestion;
+            }
+        }
     }
 
     /**
@@ -68,54 +64,6 @@ class Response
     }
 
     /**
-     * @return string
-     */
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-    /**
-     * @param string $value
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUnrestrictedValue()
-    {
-        return $this->unrestricted_value;
-    }
-
-    /**
-     * @param string $unrestricted_value
-     */
-    public function setUnrestrictedValue($unrestricted_value)
-    {
-        $this->unrestricted_value = $unrestricted_value;
-    }
-
-    /**
-     * @return ResponseData
-     */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    /**
-     * @param ResponseData $data
-     */
-    public function setData(ResponseData $data)
-    {
-        $this->data = $data;
-    }
-
-    /**
      * @return ResponseInterface
      */
     public function getRaw()
@@ -123,8 +71,28 @@ class Response
         return $this->raw;
     }
 
+    /**
+     * @param ResponseInterface $data
+     */
     protected function setRaw(ResponseInterface $data)
     {
         $this->raw = $data;
     }
+
+    /**
+     * @return Suggestion[]
+     */
+    public function getSuggestions()
+    {
+        return $this->suggestions;
+    }
+
+    /**
+     * @param Suggestion[] $suggestions
+     */
+    public function setSuggestions($suggestions)
+    {
+        $this->suggestions = $suggestions;
+    }
+
 }
