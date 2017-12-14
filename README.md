@@ -64,4 +64,4 @@ $service->setToken('...');
 
 Links
 ------
-[API documentation](https://dadata.ru/api/clean/)
+[API documentation](https://dadata.ru/api/suggest/)
