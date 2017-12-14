@@ -13,7 +13,7 @@ Installation
 
 This extension is available at packagist.org and can be installed via composer by following command:
 
-`composer require --dev glendemon/dadata-suggestions`
+`composer require glendemon/dadata-suggestions`
 
 Configuration
 ---------
@@ -29,7 +29,7 @@ Example:
 ```php
 $service = new \DadataSuggestions\DadataSuggestionsService();
 $service->setUrl('https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/');
-$service->setToken('1eb1c3a5b41ec79a12ea4234920beb6350cf03bc');
+$service->setToken('...');
 ```
 
 Miscellaneous
