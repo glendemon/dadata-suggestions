@@ -40,7 +40,6 @@ $service->setToken('...');
         foreach ($response->getSuggestions() as $suggestion) {
             $this->assertEquals('г Москва, ул Балтийская, д 6 к 1, кв 5', $suggestion->getValue());
             $this->assertEquals('г Москва, ул Балтийская, д 6 к 1, кв 5', $suggestion->getUnrestrictedValue());
-            /** @var \DadataSuggestions\Data\Address $data */
             $data = $suggestion->getData();
             $this->assertInstanceOf(\DadataSuggestions\Data\Address::class, $data);
             $this->assertEquals('Россия', $data->country);
@@ -62,3 +61,7 @@ $service->setToken('...');
         return $service;
     }
 ```
+
+Links
+------
+[API documentation](https://dadata.ru/api/clean/)
