@@ -32,7 +32,33 @@ $service->setUrl('https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/'
 $service->setToken('...');
 ```
 
-Miscellaneous
-----------------
-
-### Header stub
+```php
+    public function testSuggestAddressFlat()
+    {
+        $service = $this->getService();
+        $response = $service->suggestAddress('мск балтийская 6к1 5');
+        foreach ($response->getSuggestions() as $suggestion) {
+            $this->assertEquals('г Москва, ул Балтийская, д 6 к 1, кв 5', $suggestion->getValue());
+            $this->assertEquals('г Москва, ул Балтийская, д 6 к 1, кв 5', $suggestion->getUnrestrictedValue());
+            /** @var \DadataSuggestions\Data\Address $data */
+            $data = $suggestion->getData();
+            $this->assertInstanceOf(\DadataSuggestions\Data\Address::class, $data);
+            $this->assertEquals('Россия', $data->country);
+            $this->assertEquals('Москва', $data->city);
+            $this->assertEquals('ул Балтийская', $data->street_with_type);
+            $this->assertEquals('6', $data->house);
+            $this->assertEquals('1', $data->block);
+            $this->assertEquals('5', $data->flat);
+        }
+    }
+    
+    /**
+     * @return \DadataSuggestions\DadataSuggestionsService
+     */
+    protected function getService()
+    {
+        $service = new \DadataSuggestions\DadataSuggestionsService();
+        $service->setToken('...');
+        return $service;
+    }
+```
