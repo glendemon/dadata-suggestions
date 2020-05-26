@@ -15,6 +15,7 @@ use DadataSuggestions\ResponseData;
  * @property $region Субъект
  * @property $region_fias_id ФИАС код региона (не заполняется)
  * @property $region_kladr_id КЛАДР код региона (не заполняется)
+ * @property $region_iso_code ISO-код региона
  * @property $area_with_type Район в регионе с типом
  * @property $area_type Тип района (сокращенный)
  * @property $area_type_full Тип района
